@@ -23,7 +23,7 @@ email: jacob.clara@snhu.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Personal ePortfolio showcasing software engineering projects, skills, and experience.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://jakeclara.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jakeclara.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ""
 github_username:  jakeclara
 
