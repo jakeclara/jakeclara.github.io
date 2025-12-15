@@ -64,9 +64,9 @@ A single-page Dash app from CS-340 that visualized Austin Animal Center dog data
 
 **Quick Reflection:**  
 - Connected to a MongoDB collection using custom queries
-- Lacked aggregation pipelines and optimized database-layer access, limiting efficiency for complex queries.
-- Limited modularity: all callbacks, layouts, and database interactions in one file, making maintenance and extension difficult.
-- Only a single collection was used; no multi-collection relationships, restricting realism and flexibility for complex queries.
+- Lacked aggregation pipelines and optimized database-layer access, limiting efficiency for complex queries
+- Limited modularity: all callbacks, layouts, and database interactions in one file, making maintenance and extension difficult
+- Only a single collection was used; no multi-collection relationships, restricting realism and flexibility for complex queries
 
 ## Code Review Video
 [![Code Review Video](screenshots/code-review-video.png)](https://www.youtube.com/watch?v=Zx2sqcWFq6Y)
@@ -85,10 +85,10 @@ The enhanced artifact is a full-stack Dash application for hospitality analytics
 
 ### Software Engineering Enhancement
 **Focus:**  
-- Refactored a nearly single-file Dash application into a modular, production-style architecture using packages and Dash Pages.
-- Applied separation of concerns by introducing clear boundaries between data models, business logic, and views.
-- Created reusable layout components and structured navigation, improving maintainability and UI consistency.
-- Established a scalable foundation for future enhancements, including structured data access, documentation, and secure configuration practices.
+- Refactored a nearly single-file Dash application into a modular, production-style architecture using packages and Dash Pages
+- Applied separation of concerns by introducing clear boundaries between data models, business logic, and views
+- Created reusable layout components and structured navigation, improving maintainability and UI consistency
+- Established a scalable foundation for future enhancements, including structured data access, documentation, and secure configuration practices
 
 <details>
 <summary><strong>Click to read the full reflection narrative</strong></summary>
@@ -114,10 +114,10 @@ I do not have updates to my outcome-coverage plans. The architectural foundation
 
 ### Algorithms & Data Structures Enhancement
 **Focus:**  
-- Reworked data handling to use structured models instead of raw database documents.
-- Shifted filtering and calculations toward the database to reduce unnecessary processing in the app.
-- Improved performance and readability by working with well-defined data objects rather than unstructured data.
-- Established patterns that support more efficient queries and future growth.
+- Reworked data handling to use structured models instead of raw database documents
+- Shifted filtering and calculations toward the database to reduce unnecessary processing in the app
+- Improved performance and readability by working with well-defined data objects rather than unstructured data
+- Established patterns that support more efficient queries and future growth
 
 <details>
 <summary><strong>Click to read the full reflection narrative</strong></summary>
@@ -145,10 +145,10 @@ I researched best practices while designing and coding the seeding scripts. My g
 
 ### Database Enhancement
 **Focus:**  
-- Expanded the database from a single collection to a multi-collection design for more realistic analysis.
-- Shifted key calculations into database queries to reduce application-side processing.
-- Implemented reusable aggregation pipelines to support efficient, maintainable reporting.
-- Configured and managed a MongoDB Atlas cluster with indexed collections and secure access.
+- Expanded the database from a single collection to a multi-collection design for more realistic analysis
+- Shifted key calculations into database queries to reduce application-side processing
+- Implemented reusable aggregation pipelines to support efficient, maintainable reporting
+- Configured and managed a MongoDB Atlas cluster with indexed collections and secure access
 
 <details>
 <summary><strong>Click to read the full reflection narrative</strong></summary>
