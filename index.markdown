@@ -5,7 +5,7 @@
 layout: default
 title: Jake Clara
 ---
-# Jake Clara - ePortfolio
+# My ePortfolio
 ---
 ## Table of Contents
 - [Professional Self-Assessment](#professional-self-assessment)
@@ -15,7 +15,7 @@ title: Jake Clara
   - [Software Engineering Enhancement](#software-engineering-enhancement)
   - [Algorithms & Data Structures Enhancement](#algorithms--data-structures-enhancement)
   - [Database Enhancement](#database-enhancement)
-- [Contact / Footer](#contact--footer)
+- [Contact](#contact)
 
 ## Professional Self-Assessment
 ### My Journey  
@@ -80,6 +80,9 @@ The enhanced artifact is a full-stack Dash application for hospitality analytics
 **Screenshot:**  
 ![Enhanced Dashboard](screenshots/home-dashboard.png)
 
+**Project Links:**  
+- **Source Code:** [View on Github](https://github.com/jakeclara/venueiq)
+
 ### Software Engineering Enhancement
 **Focus:**  
 - Refactored a nearly single-file Dash application into a modular, production-style architecture using packages and Dash Pages.
@@ -109,6 +112,64 @@ I do not have updates to my outcome-coverage plans. The architectural foundation
 </p>
 </details>
 
+### Algorithms & Data Structures Enhancement
+**Focus:**  
+- Reworked data handling to use structured models instead of raw database documents.
+- Shifted filtering and calculations toward the database to reduce unnecessary processing in the app.
+- Improved performance and readability by working with well-defined data objects rather than unstructured data.
+- Established patterns that support more efficient queries and future growth.
 
+<details>
+<summary><strong>Click to read the full reflection narrative</strong></summary>
 
+<h3>The Artifact</h3>
+<p>The artifact is the same Python-based Dash dashboard that I built for my CS-340 Client-Server Development final project at the end of February. The original version mostly fetched raw documents from the MongoDB database and processed them in Python using DataFrames and client-side iteration. This baseline provided a clear starting point for enhancing the project’s algorithms, data handling, and overall efficiency.
+</p>
+<h3>Why I chose the Artifact</h3>
+<p>The original artifact pulled raw dictionaries from MongoDB and performed filtering, grouping, and calculations in Python each time the dashboard updated. It did not implement aggregation pipelines or data models/schemas. This design was functional but required unnecessary data transfer and client-side computation, which made the project a strong candidate for enhancement.
+</p>
+<p>My enhancements for this category directly address these weaknesses. As a first step, I introduced MongoEngine models and defined schemas for the data. Now, each entity field has a defined type, allowing for constraints and validation that help reduce errors and improve scalability and maintainability. Instead of returning raw dictionaries, queries now return objects such as MenuItem or RestaurantSale, for cleaner access patterns and more structured data handling.
+</p>
+<p>I have also started to move filtering, grouping, and computing to the database layer. While full aggregation pipelines are not yet implemented in the main application, I am already using them in the seed scripts, which establishes the pattern I will continue using in the final data services. For example, to build the budget, I aggregate restaurant sales and cost totals by category for a given month using a pipeline. Overall, these improvements demonstrate my ability to organize data more effectively, utilize structured models, and optimize computation at the most efficient layer of the system.
+</p>
+<h3>Course Outcomes</h3>
+<p>I have made substantial progress toward the course outcomes I planned for this enhancement. My work in the algorithms and data structures category demonstrates Course Outcome #3 by replacing raw dictionaries with MongoEngine models and beginning to shift filtering, grouping, and aggregation to the database layer to improve efficiency and structure. Through my use of version control, iterative commits, inline comments, and clear documentation, I have also demonstrated Course Outcomes #1 and #2.
+</p>
+<p>I have made progress on Course Outcome #4 by building a MongoDB Atlas cluster, creating the project database, adding users with specific roles, and fully seeding all collections. Many of the patterns for database-side aggregation pipelines in the seed scripts will carry over to the data service layer. I do not have updates to my outcome-coverage plans. The foundational work is in place, and the remaining enhancements, including full aggregation pipelines and cross-collection queries, will demonstrate the planned outcomes.
+</p>
+<h3>Reflection</h3>
+<p>Enhancing this artifact taught me about structuring data and designing more efficient processing in a Python-based application. I learned a lot about MongoEngine models, including defining schemas and setting field types with constraints. This was both challenging and enjoyable. I also refreshed my knowledge of MongoDB aggregation pipelines to plan for database-side computations. This strengthened my understanding of how to move work from the client to the database.
+I researched best practices while designing and coding the seeding scripts. My goal was to balance time investment while also demonstrating the ability to write production-quality code. The full process for this category reinforced my skills in modeling, querying, and aggregating data, and highlighted the importance of careful planning to create maintainable enhancements.
+</p>
+</details>
 
+### Database Enhancement
+**Focus:**  
+- Expanded the database from a single collection to a multi-collection design for more realistic analysis.
+- Shifted key calculations into database queries to reduce application-side processing.
+- Implemented reusable aggregation pipelines to support efficient, maintainable reporting.
+- Configured and managed a MongoDB Atlas cluster with indexed collections and secure access.
+
+<details>
+<summary><strong>Click to read the full reflection narrative</strong></summary>
+
+<h3>The Artifact</h3>
+<p>The artifact is the same Python-based Dash dashboard from my CS-340 Client-Server Development final project at the end of February. The original version only accessed a single MongoDB collection, which prevented cross-collection relationships and limited the ability to run more complex queries. The database was hosted and managed by an external provider, restricting my control over configuration, indexing, and access. This baseline provided a clear starting point for enhancing the project’s database structure and query approach. 
+</p>
+<h3>Why I chose the Artifact</h3>
+<p>I selected this artifact for my ePortfolio because it demonstrates my full-stack skills, including designing and managing database structure and connecting the application to the database. The original version included client-side processing that could have been handled at the database layer, like counting breeds and categorizing them for the pie chart. Queries that were executed on the database, such as filtering by breed, sex, and age, were simple find() operations, not full aggregation pipelines. To improve the artifact, I implemented database-side aggregation pipelines and reusable queries, which increased efficiency, maintainability, and enabled complex cross-collection analysis.
+</p>
+<p>In the original version, the program connected to a single MongoDB collection. It lacked structured relationships between collections and relied on a single data source, which limited scalability and realism. To improve the artifact, I leveraged MongoEngine’s connect method to efficiently access and query multiple collections within a single database session. I also configured a MongoDB Atlas cluster for the project, created the VenueIQ database, seeded the four required collections with two years of data, indexed those collections, and implemented a least-privilege user approach for secure access.
+</p>
+<p>Throughout this category, I continued to highlight Course Outcomes #1 and #2 by refining in-line comments and docstrings and making iterative commits to the project’s GitHub repository. I made it a priority to document any complex pipelines well for readability and maintainability. This also enhanced my learning experience, as I had to deep dive into aggregation to complete the work.
+</p>
+<h3>Course Outcomes</h3>
+<p>I completed the outcomes I planned for in Module One. Using aggregation pipelines and reducing client-side processing helped me meet Course Outcome #3, since it improved efficiency and supported more complex data handling. Enabling multi-collection connections supported Course Outcomes #3 and #4 by allowing realistic relationships and better analysis. Setting up my own Atlas cluster aligned with Course Outcomes #4 and #5 because it required proper configuration and secure access. Keeping the code well-documented and committing changes iteratively demonstrated Course Outcomes #1 and #2 through clear communication and maintainable development practices. I did not need to adjust my original plan. I do, however, have the remaining task of connecting the data visualizations to the data services through callbacks. I will complete this task during week 6 in preparation to submit the final project in week 7.
+</p>
+<h3>Reflection</h3>
+<p>Enhancing this artifact taught me a lot about structuring data, working with MongoEngine models, and designing database-side processing. I spent most of my time researching aggregation pipelines and exploring what was possible through MongoEngine’s API so I could decide when each approach was best. My biggest challenge was implementing cross-collection queries using $lookup and establishing the right relationships so the data connected as intended. Overall, the process strengthened my skills in modeling, querying, and building maintainable, database-driven functionality. Writing the first few queries was tough. By the time I worked on the last few, I was having a lot of fun.  
+</p>
+</details>
+
+## Contact
+&copy; 2025 Jake Clara | [GitHub Repo](https://github.com/jakeclara/venueiq)
