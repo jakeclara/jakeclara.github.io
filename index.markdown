@@ -82,6 +82,7 @@ The enhanced artifact is a full-stack Dash application for hospitality analytics
 
 **Project Links:**  
 - **Source Code:** [View on Github](https://github.com/jakeclara/venueiq)
+- **Live Demo:** [View on Render](https://venueiq.onrender.com/)
 
 ### Software Engineering Enhancement
 **Focus:**  
