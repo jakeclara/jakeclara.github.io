@@ -1,0 +1,113 @@
+:root {
+    --nav-bg: #fbfbfb;
+    --nav-border: #ededed;
+    --nav-text: #212427;
+    --nav-text-hover: #000000;
+    --nav-gap: 20px;
+    --nav-padding-y: 35px;
+
+    --header-text: #000000;
+    --body-text: #2c2c2c;
+    --muted-text:  #8a909d;
+
+    --font-geistmono: "GeistMono", monospace;
+
+    --text-sm: 0.95rem;
+    --text-med: 1rem;
+    --text-lg: 1.25rem;
+
+    --site-gutter: 15px;
+}
+
+main, .nav-container, footer {
+    font-family: var(--font-geistmono);
+    padding-inline: var(--site-gutter);
+}
+
+img.logo {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-container {
+    background-color: var(--nav-bg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--nav-gap);
+    padding-block: var(--nav-padding-y);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--nav-gap);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-size: var(--text-sm);
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--nav-text-hover);
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --max-content-width: 720px;
+        --overlay-height: 30px;
+        --scroll-slit-height: 2px;
+
+        --overlay-bg: #ffffff;
+
+        --nav-gap: 30px;
+        --nav-padding-y: 15px;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: var(--overlay-height);
+        background: var(--overlay-bg);
+        z-index: 20;
+        pointer-events: none;
+    }
+
+    main, .nav-container, footer {
+        max-width: var(--max-content-width);
+        margin-inline: auto;
+    }
+
+    .nav-container {
+        flex-direction: row;
+        border: 1px solid var(--nav-border);
+        align-items: center;
+        justify-content: space-between;
+        padding-block: var(--nav-padding-y );
+        position: sticky;
+        top: calc(var(--overlay-height) + var(--scroll-slit-height));
+        z-index: 10;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: var(--nav-gap)
+    }
+
+    nav li {
+        margin: 0;
+    }
+}
