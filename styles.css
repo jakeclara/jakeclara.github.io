@@ -1,22 +1,45 @@
 :root {
-    --nav-bg: #fbfbfb;
-    --nav-border: #ededed;
-    --nav-text: #212427;
-    --nav-text-hover: #000000;
-    --nav-gap: 20px;
-    --nav-padding-y: 35px;
-
-    --header-text: #000000;
-    --body-text: #2c2c2c;
-    --muted-text:  #8a909d;
-
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-off-white: #fbfbfb;
+    --color-platinum: #ededed;
+    --color-carbon-black: #212427;
+    --color-graphite: #2c2c2c;
+    --color-lavendar-gray:  #8a909d;
+    
     --font-geistmono: "GeistMono", monospace;
+    
+    --nav-spacing: 1.25rem;
+    --nav-padding-y: 2.125rem;
 
-    --text-sm: 0.95rem;
-    --text-med: 1rem;
-    --text-lg: 1.25rem;
+    --text-sm: 0.875rem;
+    --test-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.75rem;
 
-    --site-gutter: 15px;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    --letter-spacing-xl: 0.02rem;
+
+    --site-gutter: 1rem;
+
+    --radius-soft: 0.25rem;
+
+    --spacing-section: 7rem;
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;     
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;    
+    --spacing-xl: 2.5rem;
+    --spacing-2xl: 4rem;
+    --spacing-3xl: 6rem;
 }
 
 main, .nav-container, footer {
@@ -27,20 +50,21 @@ main, .nav-container, footer {
 img.logo {
     width: 24px;
     height: 24px;
+    border-radius: var(--radius-soft);
 }
 
 .nav-container {
-    background-color: var(--nav-bg);
+    background-color: var(--color-off-white);
     display: flex;
     flex-direction: column;
-    gap: var(--nav-gap);
+    gap: var(--nav-spacing);
     padding-block: var(--nav-padding-y);
 }
 
 nav ul {
     display: flex;
     flex-direction: column;
-    gap: var(--nav-gap);
+    gap: var(--nav-spacing);
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -48,29 +72,65 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--nav-text);
+    color: var(--color-carbon-black);
     font-size: var(--text-sm);
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-    color: var(--nav-text-hover);
+    color: var(--color-black);
+}
+
+section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+h1 {
+    font-weight: var(--fw-semibold);
+    font-size: var(--text-2xl);
+    text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.15);
+    letter-spacing: var(--letter-spacing-xl);
+}
+
+.name {
+    color: var(--color-black);
+    margin: 0;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-xl);
+}
+
+.badge {
+    border-radius: var(--radius-soft);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-size: var(--text-base);
+    padding: 0.25rem 0.625rem;
+    font-weight: var(--fw-semibold);
 }
 
 p {
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-graphite);
+    font-size: var(--text-base);
+    line-height: 1.5;
 }
 
 @media screen and (min-width: 768px) {
     :root {
-        --max-content-width: 720px;
+        --max-content-width: 45rem;
+
         --overlay-height: 30px;
         --scroll-slit-height: 2px;
 
-        --overlay-bg: #ffffff;
+        --nav-spacing: 1.875rem;
+        --nav-padding-y: 1rem;
 
-        --nav-gap: 30px;
-        --nav-padding-y: 15px;
     }
 
     body::before {
@@ -80,7 +140,7 @@ p {
         left: 0;
         right: 0;
         height: var(--overlay-height);
-        background: var(--overlay-bg);
+        background: var(--color-white);
         z-index: 20;
         pointer-events: none;
     }
@@ -92,22 +152,39 @@ p {
 
     .nav-container {
         flex-direction: row;
-        border: 1px solid var(--nav-border);
+        border: 1px solid var(--color-platinum);
+        border-radius: var(--radius-soft);
         align-items: center;
         justify-content: space-between;
         padding-block: var(--nav-padding-y );
         position: sticky;
         top: calc(var(--overlay-height) + var(--scroll-slit-height));
         z-index: 10;
+        margin-bottom: var(--spacing-section);
     }
 
     nav ul {
         display: flex;
         flex-direction: row;
-        gap: var(--nav-gap)
+        gap: var(--nav-spacing)
     }
 
     nav li {
         margin: 0;
+    }
+
+    .name-container {
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-md);
+        align-items: center;
+    }
+
+    h1 {
+        font-size: var(--text-3xl);
+    }
+
+    p {
+        font-size: var(--text-lg);
     }
 }
