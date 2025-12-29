@@ -5,3 +5,4 @@ header text: black
 body text: #2c2c2c   graphite
 muted text:  #8a909d   lavender gray
 logo: #212427    carbon black
+muted-text-revised: #7A8090 slate gray

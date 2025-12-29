@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jake Clara | Junior Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="/fonts/GeistMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap">
+    
     
 </head>
 <body>
     <div class="nav-container">
-        <img src="/logo.svg" alt="JC logo" class="logo">
+        <img src="/assets/images/logo.svg" alt="JC logo" class="logo">
         <nav>
             <ul>
                 <li><a href="#">Linkedin</a></li>
@@ -26,29 +24,77 @@
     </div>
 
     <main>
-        <section id="about">
+        <section class="about">
             <div class="name-container">
                 <h1 class="name">Jake Clara</h1>
                 <span class="badge">junior developer</span>
             </div>
-            <p>I’m a Junior Software Developer, dedicated to building functional, well-structured systems.</p>
+            <p class="leading-text">I’m a Junior Software Developer, dedicated to building functional, well-structured systems.</p>
             <p>I love building tools that solve real-world problems.</p>
             <p>My hospitality operations background gives me a unique perspective on organization, teamwork, and user-centered design.</p>
         </section>
 
-        <section id="projects">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, consectetur natus! Doloremque, excepturi libero voluptatem, earum necessitatibus, pariatur deserunt cum repellat modi inventore molestias hic sapiente maxime nesciunt laboriosam rerum.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim fugiat saepe molestiae. Consequuntur, a. Assumenda, voluptatum rerum, fugit eligendi amet nam minus impedit rem libero explicabo aperiam. Ea, minima culpa.</p>
+        <section class="projects">
+            <h2>projects</h2>
+            <article class="project">
+                <h3><a href="#" class="project-link">VenueIQ</a></h3>
+                <p>Analytics Dashboard / 2025</p>
+            </article>
+            <article class="project">
+                <h3><a href="#" class="project-link">TaskFlow PIM</a></h3>
+                <p>Backend Junit Test Suite</p>
+            </article>
+            <article class="project">
+                <h3><a href="#" class="project-link">Travlr</a></h3>
+                <p>Full-Stack Web Application</p>
+            </article>
         </section>
 
-        <section id="tech-stack">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, consectetur natus! Doloremque, excepturi libero voluptatem, earum necessitatibus, pariatur deserunt cum repellat modi inventore molestias hic sapiente maxime nesciunt laboriosam rerum.</p>    
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim fugiat saepe molestiae. Consequuntur, a. Assumenda, voluptatum rerum, fugit eligendi amet nam minus impedit rem libero explicabo aperiam. Ea, minima culpa.</p>
+        <section class="tech-stack">
+            <h2>stack</h2>
+            <ul class="tech-stack-list">
+                <li>
+                    <img src="/assets/icons/java-original.svg" alt="Java Logo" aria-hidden="true">
+                    <span>Java</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/spring-original.svg" alt="Spring Boot Logo" aria-hidden="true">
+                    <span>Spring Boot</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/database-fill.svg" alt="Database Symbol" aria-hidden="true">
+                    <span>SQL</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/thymeleaf-original.svg" alt="Thymeleaf Logo" aria-hidden="true">
+                    <span>Thymeleaf</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/javascript-original.svg" alt="JavaScript Logo" aria-hidden="true">
+                    <span>JavaScript</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/html5-original.svg" alt="HTML 5 Logo" aria-hidden="true">
+                    <span>HTML5</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/css3-original.svg" alt="CSS 3 Logo" aria-hidden="true">
+                    <span>CSS3</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/python-original.svg" alt="Python Logo" aria-hidden="true">
+                    <span>Python</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/mongodb-original.svg" alt="MongoDB Logo" aria-hidden="true">
+                    <span>MongoDB</span>
+                </li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        <p>Copyright 2023</p>
+        <img src="/assets/images/signature1.svg" alt="Jake Clara signature">
     </footer>
 </body>
 </html>

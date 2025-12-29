@@ -5,19 +5,23 @@
     --color-platinum: #ededed;
     --color-carbon-black: #212427;
     --color-graphite: #2c2c2c;
-    --color-lavendar-gray:  #8a909d;
+    --color-slate-gray: #6a7282;
     
-    --font-geistmono: "GeistMono", monospace;
+    --font-mono: "Geist Mono", "Courier New", Courier, monospace;
     
     --nav-spacing: 1.25rem;
     --nav-padding-y: 2.125rem;
 
     --text-sm: 0.875rem;
-    --test-base: 1rem;
+    --text-base: 1rem;
     --text-lg: 1.125rem;
     --text-xl: 1.25rem;
     --text-2xl: 1.5rem;
     --text-3xl: 1.75rem;
+
+    --h1-font-size: var(--text-2xl);
+    --h2-font-size: var(--text-lg);
+    --body-font-size: var(--text-sm);
 
     --fw-light: 300;
     --fw-regular: 400;
@@ -25,14 +29,22 @@
     --fw-semibold: 600;
     --fw-bold: 700;
 
-    --letter-spacing-xl: 0.02rem;
+    --line-height-xxs: 1.25;
+    --line-height-xs: 1.375;
+    --line-height-sm: 1.5;
+    --line-height-md: 1.625;
+    --line-height-lg: 1.75;
+    --line-height-xl: 1.875;
+    --line-height-2xl: 2;
+    --line-height-3xl: 2.25;
+
+    --letter-spacing-h1: 0.02rem;
 
     --site-gutter: 1rem;
 
     --radius-soft: 0.25rem;
 
-    --spacing-section: 7rem;
-
+    --spacing-xxs: 0.25rem;
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;     
     --spacing-md: 1.5rem;
@@ -40,10 +52,33 @@
     --spacing-xl: 2.5rem;
     --spacing-2xl: 4rem;
     --spacing-3xl: 6rem;
+    --spacing-section: 7rem;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
 }
 
 main, .nav-container, footer {
-    font-family: var(--font-geistmono);
+    font-family: var(--font-mono);
     padding-inline: var(--site-gutter);
 }
 
@@ -85,11 +120,21 @@ section {
     margin-bottom: var(--spacing-2xl);
 }
 
+h1, h2, h3 {
+    margin: 0;
+    color: var(--color-black);
+}
+
 h1 {
     font-weight: var(--fw-semibold);
-    font-size: var(--text-2xl);
-    text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.15);
-    letter-spacing: var(--letter-spacing-xl);
+    font-size: var(--h1-font-size);
+    letter-spacing: var(--letter-spacing-h1);
+}
+
+h2 {
+    font-weight: var(--fw-semibold);
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--spacing-md);
 }
 
 .name {
@@ -109,16 +154,74 @@ h1 {
     border-radius: var(--radius-soft);
     background-color: var(--color-black);
     color: var(--color-white);
-    font-size: var(--text-base);
-    padding: 0.25rem 0.625rem;
+    font-size: var(--text-sm);
+    padding: 0.3rem 0.625rem;
     font-weight: var(--fw-semibold);
 }
 
-p {
+.about p.leading-text {
+    line-height: var(--line-height-md);
+    letter-spacing: 0.03rem;
+}
+
+.about p {
     margin-bottom: var(--spacing-md);
     color: var(--color-graphite);
-    font-size: var(--text-base);
+    font-size: var(--body-font-size);
+    line-height: var(--line-height-sm);
+    font-weight: var(--fw-medium);
+}
+
+.project {
+    margin-bottom: var(--spacing-md);
+}
+
+.project-link {
+    color: var(--color-black);
+    text-decoration: none;
+    font-weight: var(--fw-medium);
+    font-size: var(--body-font-size);
+}
+
+.project-link:hover {
+    color: var(--color-slate-gray);
+    text-decoration: underline;
+}
+
+.project h3 {
+    margin-bottom: var(--spacing-xxs);
+}
+
+.project p {
+    margin: 0;
+    color: var(--color-slate-gray);
+    font-size: var(--body-font-size);
     line-height: 1.5;
+}
+
+.tech-stack-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.tech-stack-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--color-slate-gray);
+    font-size: var(--body-font-size);
+    font-weight: var(--fw-medium);
+    line-height: 1.5;
+}
+
+.tech-stack-list img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -130,6 +233,10 @@ p {
 
         --nav-spacing: 1.875rem;
         --nav-padding-y: 1rem;
+
+        --h1-font-size: var(--text-3xl);
+        --h2-font-size: var(--text-2xl);
+        --body-font-size: var(--text-base);
 
     }
 
@@ -176,15 +283,7 @@ p {
     .name-container {
         display: flex;
         flex-direction: row;
-        gap: var(--spacing-md);
+        gap: var(--spacing-sm);
         align-items: center;
-    }
-
-    h1 {
-        font-size: var(--text-3xl);
-    }
-
-    p {
-        font-size: var(--text-lg);
     }
 }
