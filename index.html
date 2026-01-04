@@ -3,23 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Clara | Junior Developer</title>
+    <meta name="description" content="Junior Software Developer building clean, functional web applications.">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-<body>
+    <link rel="preload" href="/assets/fonts/GeistMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
-    <div class="nav-container">
-        <img src="/logo.svg" alt="JC logo" class="logo">
-    </div>
+    
+    
+</head>
+<body class="preload">
+    <header class="nav-container">
+        <img src="/assets/images/logo.svg" alt="JC logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/jacobclara/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="mailto:jakeaclara@gmail.com" id="email-link">Email</a></li>
+                <li><a href="https://github.com/jakeclara" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="#" target="_blank" rel="noopener">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        <div class="content">
-            <div class="copy-email-toast">
-                <img src="/assets/icons/check-circle-fill.svg" alt="Checkmark Icon" aria-hidden="true">
-                <span>Email copied!</span>
+        <section class="about">
+            <div class="name-container">
+                <h1 class="name">Jake Clara</h1>
+                <span class="badge">junior developer</span>
             </div>
-        </div>
+            <p class="leading-text">I’m a Junior Software Developer, dedicated to building functional, well-structured systems.</p>
+            <p>I love building tools that solve real-world problems.</p>
+            <p>My hospitality operations background gives me a unique perspective on organization, teamwork, and user-centered design.</p>
+        </section>
+
+        <section class="projects">
+            <h2>projects</h2>
+            <article class="project">
+                <h3><a href="#" class="project-link">VenueIQ</a></h3>
+                <p>Analytics Dashboard / 2025</p>
+            </article>
+            <article class="project">
+                <h3><a href="#" class="project-link">TaskFlow PIM</a></h3>
+                <p>Backend Junit Test Suite</p>
+            </article>
+            <article class="project">
+                <h3><a href="#" class="project-link">Travlr</a></h3>
+                <p>Full-Stack Web Application</p>
+            </article>
+        </section>
+
+        <section class="tech-stack">
+            <h2>stack</h2>
+            <ul class="tech-stack-list">
+                <li>
+                    <img src="/assets/icons/java-original.svg" alt="" aria-hidden="true">
+                    <span>Java</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/spring-original.svg" alt="" aria-hidden="true">
+                    <span>Spring Boot</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/database-fill.svg" alt="" aria-hidden="true">
+                    <span>SQL</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/thymeleaf-original.svg" alt="" aria-hidden="true">
+                    <span>Thymeleaf</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/javascript-original.svg" alt="" aria-hidden="true">
+                    <span>JavaScript</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/html5-original.svg" alt="" aria-hidden="true">
+                    <span>HTML5</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/css3-original.svg" alt="" aria-hidden="true">
+                    <span>CSS3</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/python-original.svg" alt="" aria-hidden="true">
+                    <span>Python</span>
+                </li>
+                <li>
+                    <img src="/assets/icons/mongodb-original.svg" alt="" aria-hidden="true">
+                    <span>MongoDB</span>
+                </li>
+            </ul>
+        </section>
     </main>
+
+    <footer>
+        <img src="/assets/images/signature.svg" alt="Jake Clara signature">
+    </footer>
+
+     <output class="copy-email-toast" id="copy-toast" aria-live="polite">
+        <img src="/assets/icons/check-circle-fill.svg" alt="" aria-hidden="true">
+        <span>Email copied!</span>
+    </output>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

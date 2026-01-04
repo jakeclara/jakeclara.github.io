@@ -58,7 +58,7 @@
 
 @font-face {
   font-family: "Geist Mono";
-  src: url("/fonts/GeistMono-Regular.woff2") format("woff2");
+  src: url("/assets/fonts/GeistMono-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -66,14 +66,14 @@
 
 @font-face {
   font-family: "Geist Mono";
-  src: url("/fonts/GeistMono-Medium.woff2") format("woff2");
+  src: url("/assets/fonts/GeistMono-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Geist Mono";
-  src: url("/fonts/GeistMono-SemiBold.woff2") format("woff2");
+  src: url("/assets/fonts/GeistMono-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-display: swap;
 }
@@ -90,13 +90,12 @@ footer {
     100% { opacity: 1; }
 }
 
-
 main, .nav-container, footer {
     font-family: var(--font-mono);
     padding-inline: var(--site-gutter);
 }
 
-img.logo {
+.logo {
     width: 24px;
     height: 24px;
     border-radius: var(--radius-soft);
@@ -229,7 +228,7 @@ h2 {
     margin: 0;
     color: var(--color-slate-gray);
     font-size: var(--body-font-size);
-    line-height: 1.5;
+    line-height: var(--line-height-sm);
 }
 
 .tech-stack-list {
@@ -248,7 +247,7 @@ h2 {
     color: var(--color-slate-gray);
     font-size: var(--body-font-size);
     font-weight: var(--fw-medium);
-    line-height: 1.5;
+    line-height: var(--line-height-sm);
 }
 
 .tech-stack-list img {
@@ -260,20 +259,24 @@ h2 {
 
 .copy-email-toast {
     position: fixed;
-    top: 28px;
+    top: 1.75rem;
     left: 50%;
+
     opacity: 0;
     transform: translateX(-50%) translateY(-12px);
     transition: opacity 0.2s ease-out, transform 0.25s ease-out;
-    min-width: 200px;
+
+    min-width: 12.5rem;
     background-color: var(--color-off-white);
     color: var(--color-black);
     padding: var(--spacing-sm) var(--spacing-md);
     border: 1px solid var(--color-platinum);
     border-radius: var(--radius-soft);
+    
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--spacing-xs);
+    
     font-size: var(--text-xs);
     font-weight: var(--fw-semibold);
     font-family: var(--font-mono);
@@ -285,6 +288,23 @@ h2 {
 .copy-email-toast.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main,
+  footer {
+    animation: none;
+    opacity: 1;
+  }
+
+  .nav-container {
+    animation: none;
+    transform: none;
+  }
+
+  .copy-email-toast {
+    transition: none;
+  }
 }
 
 
@@ -327,7 +347,7 @@ h2 {
         border-radius: var(--radius-soft);
         align-items: center;
         justify-content: space-between;
-        padding-block: var(--nav-padding-y );
+        padding-block: var(--nav-padding-y);
         position: sticky;
         top: calc(var(--overlay-height) + var(--scroll-slit-height));
         z-index: 10;
