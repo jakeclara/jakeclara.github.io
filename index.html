@@ -6,20 +6,19 @@
     <title>Jake Clara | Junior Developer</title>
     <meta name="description" content="Junior Software Developer building clean, functional web applications.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preload" href="/assets/fonts/GeistMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
-
-    
-    
+    <link rel="preload" href="/assets/fonts/GeistMono-Regular.woff2" as="font" type="font/woff2" crossorigin>    
 </head>
+
 <body class="preload">
     <header class="nav-container">
         <img src="/assets/images/logo.svg" alt="JC logo" class="logo">
-        <nav>
+        <nav aria-label="Primary navigation">
             <ul>
                 <li><a href="https://www.linkedin.com/in/jacobclara/" target="_blank" rel="noopener">LinkedIn</a></li>
                 <li><a href="mailto:jakeaclara@gmail.com" id="email-link">Email</a></li>
                 <li><a href="https://github.com/jakeclara" target="_blank" rel="noopener">GitHub</a></li>
-                <li><a href="#" target="_blank" rel="noopener">Resume</a></li>
+                <!-- Replace <span> with <a> when resume is ready -->
+                <li><span>Resume</span></li>
             </ul>
         </nav>
     </header>
@@ -30,24 +29,17 @@
                 <h1 class="name">Jake Clara</h1>
                 <span class="badge">junior developer</span>
             </div>
-            <p class="leading-text">I’m a Junior Software Developer, dedicated to building functional, well-structured systems.</p>
-            <p>I love building tools that solve real-world problems.</p>
-            <p>My hospitality operations background gives me a unique perspective on organization, teamwork, and user-centered design.</p>
+            <p class="leading-text">I’m a Junior Software Developer, dedicated to thoughtful system design.</p>
+            <p>I love building tools that make work easier and more enjoyable.</p>
+            <p>My hospitality operations background gives me a unique perspective on teamwork and decision-making.</p>
         </section>
 
+        <!-- Primary project. Additional projects will be added here -->
         <section class="projects">
             <h2>projects</h2>
             <article class="project">
-                <h3><a href="#" class="project-link">VenueIQ</a></h3>
-                <p>Analytics Dashboard / 2025</p>
-            </article>
-            <article class="project">
-                <h3><a href="#" class="project-link">TaskFlow PIM</a></h3>
-                <p>Backend Junit Test Suite</p>
-            </article>
-            <article class="project">
-                <h3><a href="#" class="project-link">Travlr</a></h3>
-                <p>Full-Stack Web Application</p>
+                <h3><a href="https://github.com/jakeclara/venueiq" target="_blank" rel="noopener" class="project-link">VenueIQ</a></h3>
+                <p>Analytics Dashboard / December 2025</p>
             </article>
         </section>
 
@@ -63,8 +55,8 @@
                     <span>Spring Boot</span>
                 </li>
                 <li>
-                    <img src="/assets/icons/database-fill.svg" alt="" aria-hidden="true">
-                    <span>SQL</span>
+                    <img src="/assets/icons/postgresql-plain.svg" alt="" aria-hidden="true">
+                    <span>PostgreSQL</span>
                 </li>
                 <li>
                     <img src="/assets/icons/thymeleaf-original.svg" alt="" aria-hidden="true">
@@ -92,10 +84,11 @@
                 </li>
             </ul>
         </section>
+        
     </main>
 
     <footer>
-        <img src="/assets/images/signature.svg" alt="Jake Clara signature">
+        <img src="/assets/images/signature.svg" class="signature" alt="Jake Clara signature">
     </footer>
 
      <output class="copy-email-toast" id="copy-toast" aria-live="polite">

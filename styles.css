@@ -1,4 +1,8 @@
+/* ==============================
+   Design tokens
+   ============================== */
 :root {
+    /* Colors */
     --color-black: #000000;
     --color-white: #ffffff;
     --color-off-white: #fbfbfb;
@@ -7,10 +11,8 @@
     --color-graphite: #2c2c2c;
     --color-slate-gray: #6a7282;
     
+    /* Typography */
     --font-mono: "Geist Mono", "Courier New", Courier, monospace;
-    
-    --nav-spacing: 1.25rem;
-    --nav-padding-y: 2.125rem;
 
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
@@ -24,26 +26,16 @@
     --h2-font-size: var(--text-lg);
     --body-font-size: var(--text-sm);
 
-    --fw-light: 300;
-    --fw-regular: 400;
     --fw-medium: 500;
     --fw-semibold: 600;
-    --fw-bold: 700;
 
-    --line-height-xxs: 1.25;
-    --line-height-xs: 1.375;
     --line-height-sm: 1.5;
     --line-height-md: 1.625;
-    --line-height-lg: 1.75;
-    --line-height-xl: 1.875;
-    --line-height-2xl: 2;
-    --line-height-3xl: 2.25;
 
     --letter-spacing-h1: 0.02rem;
 
+    /* Layout */
     --site-gutter: 1rem;
-
-    --radius-soft: 0.25rem;
 
     --spacing-xxs: 0.25rem;
     --spacing-xs: 0.5rem;
@@ -52,10 +44,18 @@
     --spacing-lg: 2rem;    
     --spacing-xl: 2.5rem;
     --spacing-2xl: 4rem;
-    --spacing-3xl: 6rem;
     --spacing-section: 7rem;
+
+    --radius-soft: 0.25rem;
+
+    /* Navigation */
+    --nav-spacing: 1.25rem;
+    --nav-padding-y: 2.125rem;
 }
 
+/* ==============================
+   Font loading
+   ============================== */
 @font-face {
   font-family: "Geist Mono";
   src: url("/assets/fonts/GeistMono-Regular.woff2") format("woff2");
@@ -78,6 +78,9 @@
   font-display: swap;
 }
 
+/* ==============================
+   Global animations
+   ============================== */
 main,
 footer {
     opacity: 0;
@@ -90,11 +93,17 @@ footer {
     100% { opacity: 1; }
 }
 
+/* ==============================
+   Base layout
+   ============================== */
 main, .nav-container, footer {
     font-family: var(--font-mono);
     padding-inline: var(--site-gutter);
 }
 
+/* ==============================
+   Navigation
+   ============================== */
 .logo {
     width: 24px;
     height: 24px;
@@ -135,7 +144,9 @@ nav ul {
     padding: 0;
 }
 
-nav ul li a {
+/* Remove span after resume ready */
+nav ul li a, 
+nav ul li span {
     text-decoration: none;
     color: var(--color-carbon-black);
     font-size: var(--text-sm);
@@ -146,10 +157,9 @@ nav ul li a:hover {
     color: var(--color-black);
 }
 
-section {
-    margin-bottom: var(--spacing-2xl);
-}
-
+/* ==============================
+   Typography
+   ============================== */
 h1, h2, h3 {
     margin: 0;
     color: var(--color-black);
@@ -165,6 +175,13 @@ h2 {
     font-weight: var(--fw-semibold);
     font-size: var(--h2-font-size);
     margin-bottom: var(--spacing-md);
+}
+
+/* ==============================
+   Sections and content
+   ============================== */
+section {
+    margin-bottom: var(--spacing-2xl);
 }
 
 .name {
@@ -256,7 +273,14 @@ h2 {
     flex-shrink: 0;
 }
 
+.signature {
+    width: 128px;
+    height: 96px;
+}
 
+/* ==============================
+   UI components
+   ============================== */
 .copy-email-toast {
     position: fixed;
     top: 1.75rem;
@@ -290,6 +314,9 @@ h2 {
   transform: translateX(-50%) translateY(0);
 }
 
+/* ==============================
+   Accessibility
+   ============================== */
 @media (prefers-reduced-motion: reduce) {
   main,
   footer {
@@ -307,7 +334,9 @@ h2 {
   }
 }
 
-
+/* ==============================
+   Responsive layout
+   ============================== */
 @media screen and (min-width: 768px) {
     :root {
         --max-content-width: 45rem;
