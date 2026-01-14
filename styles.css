@@ -174,7 +174,7 @@ h1 {
 h2 {
     font-weight: var(--fw-semibold);
     font-size: var(--h2-font-size);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 /* ==============================
@@ -398,5 +398,17 @@ section {
         flex-direction: row;
         gap: var(--spacing-sm);
         align-items: center;
+    }
+
+    h2 {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .about p {
+        font-size: var(--body-font-size);
+    }
+
+    .project-link {
+        font-size: var(--body-font-size);
     }
 }
